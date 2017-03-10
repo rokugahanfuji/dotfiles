@@ -1,29 +1,22 @@
-[core]
-	excludesfile = /Users/t-fujisawa/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [user]
-	name = rokugahanfuji
-	email = rokugahanfuji@gmail.com
-[commit]
-	template = /Users/t-fujisawa/.stCommitMsg
+    email = rokugahanfuji@gmail.com
+    name = Fujisawa Tsutomu
 [color]
     ui = auto
 [core]
+    editor = emacs
     quotepath = false
+    excludesfile = ~/.gitignore_grobal
+    ignorecase = false
     precomposeunicode = true
     autocrlf = false
-		excludesfile = /Users/t-fujisawa/.gitignore_global
 [rebase]
     autostash = true
 [push]
     default = simple
 [alias]
-    log-graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=format-local:'%Y/%m/%d %H:%M:%S'
+    log-graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit 
+--date=format-local:'%Y/%m/%d %H:%M:%S'
     d1 = diff HEAD~            # HEADから1つ前とdiff
     d2 = diff HEAD~~           # HEADから2つ前とdiff
     d3 = diff HEAD~~~          # HEADから3つ前とdiff
@@ -37,8 +30,8 @@
     clean = git-media-clean %f
     smudge = git-media-smudge %f
 [pager]
-    log = diff-highlight|less -c
-    show = diff-highlight|less -c
-    diff = diff-highlight|less -c
+        log = diff-highlight|less -c
+        show = diff-highlight|less -c
+        diff = diff-highlight|less -c
 [ghq]
     root = ~/git
